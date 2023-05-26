@@ -11,17 +11,47 @@
 	<body>
 		<main>
 			<section>
-				<h1>Wetter-App</h1>
-				<form>
-					<div class="input">
+				<h1 class="heading">Wetter-App</h1>
+		  <form>
+  <div class="input">
 						<label for="city"></label>
 						<input type="text" id="city" placeholder="City" name="city" />
+						<label for="country"></label>
+						<input type="text" id="country" placeholder="Country" name="Country" />
 						<button type="submit" id="searchbtn">Suchen</button>
-					</div>
-				</form>
-			</section>
+  </div>
+</form>
+</section>
 			<!-- In der Section werden divs/article der jeweiligen Stadt geladen classnames sind dir überlassen fürs styling -->
 			<!-- <section></section> -->
+			<!-- <section class="info">
+				
+				<div class="cityname"></div>
+				<div class="location"></div>
+				<div class="#">#</div>
+				<div class="#">#</div>
+				<div class="#">#</div>
+
+			</section> -->
+
+			<section id="weatherSection"><article><div>
+				<h3>Berlin</h3>
+				<p>Country: DE
+				</p><p>lat: 52.5170365 lon: 13.3888599</p>
+				<p>State: undefined</p></div><div>
+				<img src="https://openweathermap.org/img/wn/01d@2x.png" alt="Clear">
+				<p>Clear</p>
+				<p>Klarer Himmel</p></div>
+			</article><article><div>
+				<h3>Berlin</h3>
+				<p>Country: US
+				</p><p>lat: 44.4688795 lon: -71.1836547</p>
+				<p>State: New Hampshire</p></div>
+			</article>
+</section>
 		</main>
 	</body>
+	<footer>
+		<small>Made with <span>❤</span> by Paul & Timo</a>
+	</footer>
 </html>
