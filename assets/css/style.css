@@ -1,82 +1,132 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
 :root {
-    --text_light: #fff;
-    --bg-color: #43affc;
+  --primary-color: #43affc;
+  --text-color: #fff;
+  --input-color: #4a90e2;
 }
 
 html {
-    font-size: 62.5%;
-    scroll-behavior: smooth;
-}
-
-@font-face {
-    font-family: ;
-    src: url("");
-    text-decoration: var(--text_light);
+  font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-weight: normal;
-    font-family: 'Poppins', sans-serif;
-  }
-
-  h1{
-    display: flex;
-    justify-content: center;
-    color: var(--text_light);
-    font-size: 8rem;
-
-  }
-
-  button {
-    cursor: pointer;
-  }
-
-a {
-    
-}
-section{
-    border: dotted;
-    
-}
-
-button,
-input {
-  border: dotted black;
-  background: none;
-  outline: none;
-  color: inherit;
-  font-size: 3rem;
-
-}
-
-.input {
-    display: flex;
-    justify-content: center;
-    color: var(--text_light);
-}
-
-.info {
-    display: flex;
-    justify-content: center;
-    color: var(--text_light);
-}
-
-.heading {
-    
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    background-color: var(--bg-color);
+  font-family: 'Poppins', sans-serif;
+  background-color: #f1f5f8;
+}
+
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+section {
+  background-color: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.container {
+  text-align: center;
+}
+
+.heading {
+  color: var(--primary-color);
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.input {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+label {
+  font-size: 1.6rem;
+  color: var(--text-color);
+  margin-right: 1rem;
+}
+
+input {
+  border: none;
+  background-color: #f7f9fb;
+  padding: 0.5rem 1rem;
+  border-radius: 0.3rem;
+  font-size: 1.6rem;
+  color: var(--input-color); /* Änderung der Schriftfarbe auf Blau */
+  margin-right: 1rem;
+  width: 12rem;
+}
+
+button {
+  border: none;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  padding: 0.5rem 2rem;
+  font-size: 1.6rem;
+  border-radius: 0.3rem;
+  cursor: pointer;
+}
+
+#weatherSection {
+  display: flex;
+  justify-content: space-between;
+}
+
+article {
+  background-color: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  flex-basis: 45%;
+  margin-bottom: 2rem;
+}
+
+article:last-child {
+  flex-basis: 100%;
+}
+
+img {
+  max-width: 100%;
 }
 
 footer {
-    color: var(--text_light);
-    display: flex;
-    justify-content: flex-end;
-    
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  text-align: center;
+  padding: 1rem;
+  font-size: 1.4rem;
+  border-radius: 0.5rem;
+}
+
+footer small span {
+  color: red;
+}
+
+#weatherSection div {
+  display: flex;
+  align-items: center;
+}
+
+#weatherSection div:last-child {
+  margin-left: auto;
+  padding-left: 2rem;
 }
