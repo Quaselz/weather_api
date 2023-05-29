@@ -22,12 +22,12 @@ btn.addEventListener("click", (e) => {
 	//const stateCode = "," + inputStateCode.value;
 	//let countryCode = "," + inputCountryCode.value;
 	//let countryCode = "," + "Deutschland";
-	const limit = "&limit=" + 2;
+	const limit = "&limit=" + 10; //max is eig 5 laut doku
 
 	//checks if there is a section
 	if (!section) {
 		section = document.createElement("section");
-		/ * classen der section hier adden mit section.classList.add("name") oder section.setAttribute("class", "name");/;
+		// * classen der section hier adden mit section.classList.add("name") oder section.setAttribute("class", "name");/;
 		section.setAttribute("id", "weatherSection");
 		document.querySelector("main").appendChild(section);
 	} else {
@@ -84,7 +84,7 @@ const fetchWeather = (city, divContainer) => {
 		.then((data) => {
 			let divWeatherContainer = divContainer.querySelector(".weather");
 			// * ^1 classen des divs der weathers hier adden mit divWeatherContainer.classList.add("name") oder divWeatherContainer.setAttribute("class", "name");
-
+			console.log({ data });
 			if (!divWeatherContainer) {
 				divWeatherContainer = document.createElement("div");
 				// * sowie hier anpassen falls bei ^1 es änderungen gab
@@ -93,9 +93,12 @@ const fetchWeather = (city, divContainer) => {
 
 			// * Classen für den Inhalt der divWeatherContainer hier adden (wie im HTML) mit class="namen" innerhalb des jeweiligen html-tags
 			const weatherContent = `
-                    <img src="https://openweathermap.org/img/wn/${data["weather"][0]["icon"]}@2x.png" alt="${data["weather"][0]["main"]}">
-                    <p>${data["weather"][0]["main"]}</p>
-                    <p>${data["weather"][0]["description"]}</p>`;
+				<figure>
+				<img src="https://openweathermap.org/img/wn/${data["weather"][0]["icon"]}@2x.png" alt="${data["weather"][0]["main"]}">
+				<figcaption>${data["main"]["temp"]}°C</figcaption>
+				</figure>
+                <p>${data["weather"][0]["main"]}</p>
+                <p>${data["weather"][0]["description"]}</p>`;
 
 			//überschreiben des inhalts des divWeatherContainers
 			divWeatherContainer.innerHTML = weatherContent;
