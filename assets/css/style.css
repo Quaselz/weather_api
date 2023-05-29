@@ -20,6 +20,10 @@ html {
 body {
 	font-family: "Poppins", sans-serif;
 	background-color: #f1f5f8;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 main {
@@ -98,6 +102,8 @@ article {
 	padding: 2rem;
 	flex-basis: 45%;
 	margin-bottom: 2rem;
+  text-align: center;
+  max-width: 20%;
 }
 
 article:last-child {
@@ -129,5 +135,11 @@ footer small span {
 
 #weatherSection div:last-child {
 	margin-left: auto;
-	padding-left: 2rem;
+	
 }
+
+figcaption {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
