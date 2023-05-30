@@ -49,7 +49,7 @@ btn.addEventListener("click", (e) => {
 				const divContent = `<div>
                     <h3>${result["name"]}</h3>
                     <p>Country: ${result["country"]}
-                    <p>lat: ${result["lat"]} lon: ${result["lon"]}</p>
+                    <p>lat: ${result["lat"]} <br/>lon: ${result["lon"]}</p>
                     <p>State: ${result["state"]}</p></div>
                 `;
 
