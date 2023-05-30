@@ -46,6 +46,10 @@ btn.addEventListener("click", (e) => {
 				// * classen der article hier adden mit articleContainer.classList.add("name") oder articleContainer.setAttribute("class", "name");
 
 				// * Classen für den Inhalt der Article hier adden (wie im HTML) mit class="namen"innerhalb des jeweiligen html-tag
+				if (result["state"] === undefined) {
+					result["state"] = "unbekannt";
+				}
+
 				const divContent = `<div>
                     <h3>${result["name"]}</h3>
                     <p>Country: ${result["country"]}
