@@ -114,6 +114,17 @@ article {
 	margin-bottom: 2rem;
 	text-align: center;
 	max-width: 20%;
+	cursor: pointer;
+	transition: transform 0.3s;
+}
+article:hover,
+article:focus,
+article:active {
+	transform: scale(1.02);
+}
+
+article:hover h3 {
+	color: var(--primary-color);
 }
 
 article:last-child {
@@ -154,6 +165,7 @@ figcaption {
 h3 {
 	font-size: 1.7rem;
 	text-decoration: underline;
+	transition: color 0.3s;
 }
 p {
 	font-size: 1.4rem;
